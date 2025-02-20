@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ COLLEGE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">CJ COLLEGE</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+            <li>
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li>
+                <a href="#" onclick="toggleDropdown(event, 'studentDropdown')">Student</a>
+                <ul class="dropdown" id="studentDropdown">
+                    <li><a href="#">Level I</a></li>
+                    <li><a href="#">Level II</a></li>
+                    <li><a href="#">Level III</a></li>
+                    <li><a href="#">Level IV</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="toggleDropdown(event, 'teacherDropdown')">Teacher</a>
+                <ul class="dropdown" id="teacherDropdown">
+                    <li><a href="#">A Level</a></li>
+                    <li><a href="#">B Level</a></li>
+                    <li><a href="#">C Level</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+        <div class="search-container">
+            <i class="fa fa-search"></i>
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        
+    </div>
+
+    <div class="welcome-container">
+        <div class="content">
+            <h1>Welcome to CJ College</h1>
+            <p>Your journey to excellence begins here.</p>
+            <a href="gallery.html" class="btn">Explore Now</a>
+        </div>
+
+    </div>
+
+    <div class="new"> <h4 class="fa-solid fa-chevron-down">Explore CJ COLLEGE</h4></div>
+
+    <div class="main-text">
+        <div class="text2">
+            <h1>A Mission Defined by Possibility</h1>
+            <p>CJ, our mission of discovery and learning is energized by a spirit of optimism and possibility that dates to our founding. Here you’ll find a place of intellectual expansiveness, wide-ranging perspectives, and freedom to explore new lines of thinking. Buzzing with ideas and innovation, approaching questions with openness and curiosity, pursuing excellence in all we do – this is CJ.</p>
+            <button>More About CJ</button>
+
+        </div>
+    </div>
+
+
+    <div class="img0" >
+        <div class="container-3">
+                 <h1>Campus Life</h1>
+                 <h4>Building a vibrant community of creative and accomplished people from around the world</h4>
+                 <button>See More ...</button>
+        </div>
+
+        <div class="container-3">
+            <h1>Athletics</h1>
+            <h4>Providing student-athletes the opportunity to achieve excellence both in competition and in the classroom</h4>
+            <button>See More ...</button>
+   </div>
+
+            <div class="container-3">
+           <h1>Admission</h1>
+           <h4>Offering extraordinary freedom to explore, to collaborate, and to challenge yourself</h4>
+            <button>See More ...</button>
+           </div>
+    </div>
+    <div class="main-text2">
+        <div class="text3">
+            <h1>  Research </h1>
+            <p>Driving discoveries vital to our world, our health, and our intellectual life</p>
+            <hr>
+            <div class="main-con">
+                <div class="sub-con">
+                  <h1>15 Institutes</h1>
+                  <h4>cross disciplinary boundaries </h4>
+                </div>
+
+                <div class="sub-con">
+                    <h1>20 Libraries</h1>
+                    <h4>hold over 12 million items </h4>
+                  </div>
+
+                  <div class="sub-con">
+                    <h1>$1.98 Billion</h1>
+                    <h4>sponsored research budget  </h4>
+                  </div>
+
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    
+   
+
+    <div class="footer">
+        <ul>
+            <li> <a href="" class="fa fa-info-circle"> &nbsp;  About Us</a></li>
+            <li> <a href="" class="fa fa-envelope" > &nbsp; Contact Us </a></li>
+            <li> <a href="" class="fa fa-newspaper"> &nbsp; News</a></li>
+            <li> <a href="" class="fa fa-question-circle"> &nbsp; FAQ</a></li>
+        </ul>
+    </div>
+    
+    
+    
+    <script>
+       function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("show");
+        }
+
+        function toggleDropdown(event, dropdownId) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block"; // Toggle dropdown visibility
+        }
+    </script>
+</body>
+</html>

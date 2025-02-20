@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ COLLEGE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">CJ COLLEGE</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+            <li>
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li>
+                <a href="#" onclick="toggleDropdown(event, 'studentDropdown')">Student</a>
+                <ul class="dropdown" id="studentDropdown">
+                    <li><a href="#">Level I</a></li>
+                    <li><a href="#">Level II</a></li>
+                    <li><a href="#">Level III</a></li>
+                    <li><a href="#">Level IV</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="toggleDropdown(event, 'teacherDropdown')">Teacher</a>
+                <ul class="dropdown" id="teacherDropdown">
+                    <li><a href="#">A Level</a></li>
+                    <li><a href="#">B Level</a></li>
+                    <li><a href="#">C Level</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="search-container">
+            <i class="fa fa-search"></i>
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        
+    </div>
+
+    <h1 class="h1te">Our Employee</h1>
+
+    <div class="team-container">
+        <div class="team-member">
+            <img src="https://staticg.sportskeeda.com/editor/2022/11/6da6f-16695061824149-1920.jpg" alt="Member 1">
+            <h3>Carl Johnson</h3>
+            <p>president</p>
+        </div>
+        <div class="team-member">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREli1UoYpKaxh5vQ__dm27zQ3jgMz82s4KLg&s" alt="Member 2">
+            <h3>Ryder Wilson</h3>
+            <p>Vice President for Academic Affairs</p>
+        </div>
+        <div class="team-member">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBK9Qn8R6H50D7YL9CrunEbuAyHBc3O-fA7-J-&s=0" alt="Member 3">
+            <h3>Ken Rosenberg</h3>
+            <p>Vice President for Student Affairs</p>
+        </div>
+        <div class="team-member">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDFRVkiZsTatyTgrNpvUnFS545aihxW5diw&s" alt="Member 4">
+            <h3>Big Smoke</h3>
+            <p>Dean Of Cj College</p>
+        </div>
+        <div class="team-member">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJeWq0OLBJcjmZxQjUiJGP3sW9dC7tN6Oe9g&s" alt="Member 5">
+            <h3>Wu Zi Wu</h3>
+            <p>Assistant Dean</p>
+        </div>
+        <div class="team-member">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmpVyjCrbI2Ry-YohoddKVYru77SxPzmMKWA&s" alt="Member 6">
+            <h3>JIZZY B</h3>
+            <p>Department Head</p>
+        </div>
+      
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li> <a href="" class="fa fa-info-circle"> &nbsp;  About Us</a></li>
+            <li> <a href="" class="fa fa-envelope" > &nbsp; Contact Us </a></li>
+            <li> <a href="" class="fa fa-newspaper"> &nbsp; News</a></li>
+            <li> <a href="" class="fa fa-question-circle"> &nbsp; FAQ</a></li>
+        </ul>
+    </div>
+    
+    
+    
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("show");
+        }
+
+        function toggleDropdown(event, dropdownId) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block"; // Toggle dropdown visibility
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const searchBar = document.querySelector(".search-bar");
+    const teamMembers = document.querySelectorAll(".team-member");
+
+    searchBar.addEventListener("keyup", function () {
+        let searchTerm = searchBar.value.toLowerCase();
+
+        teamMembers.forEach(member => {
+            let name = member.querySelector("h3").textContent.toLowerCase();
+            let role = member.querySelector("p").textContent.toLowerCase();
+
+            if (name.includes(searchTerm) || role.includes(searchTerm)) {
+                member.style.display = "block"; // Show matching results
+            } else {
+                member.style.display = "none"; // Hide non-matching results
+            }
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
